@@ -1,0 +1,17 @@
+{
+  "name": "powermetalarchive",
+  "version": "1.0.0",
+  "description": "A tool for cataloguing the Power Metal Collection Volumes and being able to easily search them.",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^8.0.53",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-typescript": "^3.2.3",
+    "merge2": "^1.2.0",
+    "typescript": "^2.6.1"
+  }
+}
