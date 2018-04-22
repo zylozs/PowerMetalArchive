@@ -15,7 +15,13 @@ gulp.task('clean', function()
 
 let project = typescript.createProject('tsconfig.json');
 
-gulp.task('prod', ['clean'], () =>
+gulp.task('copy-deps', ['clean'], () =>
+{
+    gulp.src('config.json')
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('prod', ['copy-deps'], () =>
 {
     return project.src()
         .pipe(project(typescript.reporter.defaultReporter()))
@@ -30,7 +36,7 @@ gulp.task('prod', ['clean'], () =>
         .pipe(gulp.dest('dist'))
 });
 
-gulp.task('dev', ['clean'], () =>
+gulp.task('dev', ['copy-deps'], () =>
 {
     const writeSourceMapsOptions = 
     {
